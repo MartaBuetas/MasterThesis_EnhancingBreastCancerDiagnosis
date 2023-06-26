@@ -1,1 +1,1 @@
-# BreastCancerDetection
+# BreastCancerDiagnosis
