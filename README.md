@@ -18,8 +18,9 @@ This project opens up new research possibilities through collaboration with heal
 
 ## Methods and material
 
-For this project the [BCDR dataset](https://bcdr.eu/information/about) was used...
+- For this project, patches were extracted from the mammograms, including both lesion and healthy areas, in both scanned and digital formats. The technique followed for generating the patch dataset is explained in detail in the Python notebook `generate_patch_dataset.ipynb`. To generate the dataset, the BCDR dataset needs to be downloaded. Three metadata .csv files are also generated, one for lesions, another for healthy digital patches, and a third one for scanned film patches. These files contain the corresponding data required for the project objectives, each with a unique ID for each patch. To convert the previously generated .csv files into a unified .jsonl metadata file, the Python script `csv_to_jsonl_metadata.py` is used. Additionally, the patches containing lesions are extracted with varying percentages of adjacent healthy tissue or different levels of zoom. This approach serves two purposes: exploring the model's robustness against different window sizes used in the sliding window procedure for lesion detection, and analysing the influence of the annotation's tightness to the lesion on the performance of a classifier. 
+
+- 
 
 SinGAN official repository...
 
-- `generate_patch_dataset.ipynb` → input: root path for BCDR dataset → output: lesion and healthy patches from both digital and film, creation of a .csv with metadata saved in a folder called ‘data’
